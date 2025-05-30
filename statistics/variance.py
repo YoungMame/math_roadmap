@@ -1,4 +1,4 @@
-# Variance is a measure of the average difference beetween the average and the values of a set ^ 2
+# Variance is a measure of the mean difference beetween the mean and the values of a set ^ 2
 # We do it sqrt because we want to work with abs values
 # Standard deviation = sqrt of variance
 
@@ -9,10 +9,10 @@ dataset1 = [1, 6, 42, 2, 8]
 dataset2 = [5, 5, 5, 5, 5]
 
 def var(dataset):
-	average = np.average(dataset)
+	mean = np.mean(dataset)
 	totalSum = 0
 	for i in range(len(dataset)):
-		diff = np.square(dataset[i] - average)
+		diff = np.square(dataset[i] - mean)
 		totalSum += diff
 	return (totalSum / (len(dataset) - 1))
 
